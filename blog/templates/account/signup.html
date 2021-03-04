@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <form style="margin-top: 15%;" method="POST" >
+        <h2>Registrar</h2>
+        {% csrf_token %}
+
+        {{ form|crispy }}
+        <br>
+
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+
+    <h4>O Registrate con :</h4>
+    <a href="{% provider_login_url 'github' %}">Github</a>
+{% endblock content%}

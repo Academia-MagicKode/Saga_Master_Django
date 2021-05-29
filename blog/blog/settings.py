@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     #Local
     'users.apps.UsersConfig',
+    'posts.apps.PostsConfig'
 
 ]
 
@@ -134,7 +135,7 @@ USE_TZ = True
 
 #----------STATIC FILES----------------------------------------------
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 
 #-----Cripsy Forms--------------------------------------------------
 CRISPY_TEMPLATE_PACK='bootstrap4'
@@ -166,3 +167,4 @@ ACCOUNT_USERNAME_REQUIRED= False
 ACCOUNT_AUTHENTICATION_METHOD='email'
 ACCOUNT_EMAIL_UNIQUE=True
 ACCOUNT_EMAIL_REQUIRED=True
+
